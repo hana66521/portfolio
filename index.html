@@ -871,18 +871,16 @@ Quantity takeoff for plumbing materials</div>
     <div class="panel-inner">
       <div class="cert-grid">
         <div class="from-left">
-          <div class="cert-col-title">Software Courses</div>
-          <div class="cert-row"><div class="cert-badge">📚</div><div><div class="cert-nm">AutoCAD </div><div class="cert-type">Technical Course · 60 Hours</div></div></div>
-          <div class="cert-row"><div class="cert-badge">📚</div><div><div class="cert-nm">Auto CAD Structural Detailing (ASD)  </div><div class="cert-type">Technical Course · 48 Hours</div></div></div>
-          <div class="cert-row"><div class="cert-badge">📚</div><div><div class="cert-nm"> AutoCAD Civil 3d  </div><div class="cert-type">Technical Course · 40 Hours</div></div></div>
-          <div class="cert-row"><div class="cert-badge">📚</div><div><div class="cert-nm">SITE (CONCRETE AND FINSHES) </div><div class="cert-type">Technical Course · 36 Hours</div></div></div>
+          <div class="cert-row"><div class="cert-badge">📚</div><div><div class="cert-nm">AutoCAD </div><div class="cert-type">Technical Course</div></div></div>
+          <div class="cert-row"><div class="cert-badge">📚</div><div><div class="cert-nm">Auto CAD Structural Detailing (ASD)  </div><div class="cert-type">Technical Course</div></div></div>
+          <div class="cert-row"><div class="cert-badge">📚</div><div><div class="cert-nm"> AutoCAD Civil 3d  </div><div class="cert-type">Technical Course</div></div></div>
+          <div class="cert-row"><div class="cert-badge">📚</div><div><div class="cert-nm">SITE (CONCRETE AND FINSHES) </div><div class="cert-type">Technical Course</div></div></div>
         </div>
         <div class="from-right sd2">
-          <div class="cert-col-title"></div>
-          <div class="cert-row"><div class="cert-badge">📚</div><div><div class="cert-nm">Technical office work ( Quantity surveying and shop drawing by Revit ) </div><div class="cert-type">Advanced Course · 120 Hours</div></div></div>
-          <div class="cert-row"><div class="cert-badge">📚</div><div><div class="cert-nm">Quantity Surveying </div><div class="cert-type">Advanced Course · 80 Hours</div></div></div>
-          <div class="cert-row"><div class="cert-badge">📚</div><div><div class="cert-nm">Technical office work ( Quantity surveying and shop drawing by ASD ) </div><div class="cert-type">Preparation Course · 70 Hours</div></div></div>
-          <div class="cert-row"><div class="cert-badge">📚</div><div><div class="cert-nm"> Road Design and technical office Diploma</div><div class="cert-type">Specialized Course · 45 Hours</div></div></div>
+          <div class="cert-row"><div class="cert-badge">📚</div><div><div class="cert-nm">Technical office work ( Quantity surveying and shop drawing by Revit ) </div><div class="cert-type">Advanced Course</div></div></div>
+          <div class="cert-row"><div class="cert-badge">📚</div><div><div class="cert-nm">Quantity Surveying </div><div class="cert-type">Advanced Course</div></div></div>
+          <div class="cert-row"><div class="cert-badge">📚</div><div><div class="cert-nm">Technical office work ( Quantity surveying and shop drawing by ASD ) </div><div class="cert-type">Preparation Course</div></div></div>
+          <div class="cert-row"><div class="cert-badge">📚</div><div><div class="cert-nm"> Road Design and technical office Diploma</div><div class="cert-type">Specialized Course</div></div></div>
           </div>
       </div>
     </div>
@@ -1103,7 +1101,7 @@ function renderGalleryGrid(data, elId){
   const grid = document.getElementById(elId);
   if(!grid) return;
   grid.innerHTML = data.map((g,i)=>
-    `<div class="gitem ${g.layout}" onclick="openImgModal(this)" data-title="${g.title}" data-desc="${g.desc}"><img src="${g.img}" alt="${g.title}" loading="lazy"><div class="gitem-overlay"><div class="gitem-label">${g.title}</div><div class="gitem-info">Click for info</div></div></div>`
+    `<div class="gitem ${g.layout}" onclick="openImgModal(this)" data-title="${g.title}" data-desc=""><img src="${g.img}" alt="${g.title}" loading="lazy"><div class="gitem-overlay"><div class="gitem-label">${g.title}</div><div class="gitem-info">Click for info</div></div></div>`
   ).join('');
   addHoverCursor('.gitem');
 }
