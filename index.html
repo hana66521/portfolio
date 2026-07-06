@@ -1274,9 +1274,16 @@ function openTechDetail(key){
       <div class="skill-work-overlay"><div class="swo-title">${w.title}</div><div class="swo-desc">${w.desc}</div></div>
     </div>`
   ).join('');
-  document.getElementById('td-sub').innerHTML =
-    `<div class="skill-sub-card"><div class="skill-sub-title">Tools Used</div><div class="skill-sub-list">${d.tools.map(t=>`<div class="skill-sub-item">${t}</div>`).join('')}</div></div>` +
-    `<div class="skill-sub-card"><div class="skill-sub-title">Deliverables</div><div class="skill-sub-list">${d.outputs.map(o=>`<div class="skill-sub-item">${o}</div>`).join('')}</div></div>`;
+  if(key === 'autocad'){
+    document.getElementById('td-sub').innerHTML = '';
+  } else if(key === 'shopdrawings'){
+    document.getElementById('td-sub').innerHTML =
+      `<div class="skill-sub-card"><div class="skill-sub-title">Tools Used</div><div class="skill-sub-list">${d.tools.map(t=>`<div class="skill-sub-item">${t}</div>`).join('')}</div></div>`;
+  } else {
+    document.getElementById('td-sub').innerHTML =
+      `<div class="skill-sub-card"><div class="skill-sub-title">Tools Used</div><div class="skill-sub-list">${d.tools.map(t=>`<div class="skill-sub-item">${t}</div>`).join('')}</div></div>` +
+      `<div class="skill-sub-card"><div class="skill-sub-title">Deliverables</div><div class="skill-sub-list">${d.outputs.map(o=>`<div class="skill-sub-item">${o}</div>`).join('')}</div></div>`;
+  }
   document.getElementById('skills-technical').classList.remove('active');
   document.getElementById('skills-tech-detail').classList.add('active');
   addHoverCursor('.skill-work-item');
